@@ -16,8 +16,8 @@ const StartUpModal = ({ startUp, setShowModal, formatCustomDate}) => {
             <i className="fa-solid fa-circle-xmark cursor-pointer hover:opacity-70 fa-lg"></i>
           </span>
           <div className="flex flex-col md:flex-row justify-center p-3 h-full">
-            <div className={`flex flex-col bg-cover bg-startup-bg justify-center items-center md:w-2/3 h-full mx-3`}>
-              <h2 className="text-2xl font-semibold mb-4 text-center">
+            <div className={`flex flex-col bg-cover bg-search-bg justify-center items-center md:w-2/3 h-full mx-3`}>
+              <h2 className="text-2xl font-bold mb-4 text-center">
                 {startUp.StartupName || "N/A"}
               </h2>
               <p className="mb-2">
@@ -43,8 +43,6 @@ const StartUpModal = ({ startUp, setShowModal, formatCustomDate}) => {
                   ))}
                 </ul>
               </div>
-
-              {/* Investment Type */}
               <p className="text-gray-700 mt-5 text-lg md:text-base font-semibold">
                 Investment Type:{" "}
                 <span className="text-gray-600 mx-2">{startUp.InvestmentType || "N/A"}</span>

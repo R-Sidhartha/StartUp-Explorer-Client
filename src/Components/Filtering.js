@@ -15,11 +15,11 @@ const Filtering = ({ startUps, onFilterChange }) => {
 
   return (
     <div className=" flex flex-col sm:flex-row justify-center items-center">
-      <label className="block text-gray-700 mx-2 font-semibold">
+      <label className="block text-white mx-2 font-semibold text-lg">
         Investment Type:
       </label>
       <select
-        className="mt-1 p-2 border border-gray-300 rounded-md"
+        className="mt-1 sm:mt-0 p-2 border border-gray-300 rounded-md bg-gray-200"
         value={selectedFilter}
         onChange={handleFilterChange}
       >

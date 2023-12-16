@@ -2,7 +2,7 @@ import { useState } from "react";
 import StartUpContext from "./StartUpContext";
 
 const StartUpsState = (props) => {
-  const host = "http://localhost:5001";
+  const host = "https://startupexplorer-server.onrender.com";
   const initialStartUpState = [];
   const [StartUps, setStartUps] = useState(initialStartUpState);
 
@@ -77,9 +77,6 @@ const StartUpsState = (props) => {
       });
       const data = await response.json();
       console.log(data);
-      // const updatedStartUps = StartUps.filter((startUp) => {
-      //   return startUp._id === id;
-      // });
       setStartUps((prevStartUps) => prevStartUps.filter((startup) => startup._id !== id));
     } catch (error) {
       console.error(error.message);

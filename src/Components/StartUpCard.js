@@ -35,12 +35,12 @@ const StartUpCard = ({ startUp, DeleteStartUp }) => {
     DeleteStartUp(startUp._id);
   };
   return (
-    <div className="relative group">
+    <div className="relative group ">
       <div
-        className="bg-white rounded-md p-4 shadow-lg mt-8 sm:mt-4 relative z-10"
+        className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 rounded-md p-4 shadow-lg  relative z-10"
         
       >
-        <span className="text-2xl font-bold text-center block mb-2">
+        <span className="text-2xl font-bold text-center block mb-2 mt-4 lg:mt-0">
           {startUp.StartupName || "N/A"}
         </span>
         <span className="text-gray-600 text-center block h-5">
@@ -83,7 +83,7 @@ const StartUpCard = ({ startUp, DeleteStartUp }) => {
         </div>
       </div>
       <div className="absolute inset-0 bg-black bg-opacity-80 rounded-md p-4 lg:flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-20 hidden">
-        <button className=" text-white px-4 py-2 mr-2 hover:opacity-60" onClick={handleOpenModal}>
+        <button className=" text-green-600 px-4 py-2 mr-2 hover:opacity-60" onClick={handleOpenModal}>
         <i className="fa-solid fa-eye fa-xl "></i>
         </button>
         <button className=" hover:opacity-60 px-4 py-2" onClick={handleDelete}><i className="fa-solid fa-trash  text-red-600 fa-xl"></i></button>

@@ -87,7 +87,7 @@ const CreateStartUp = ({ onCreateStartUp, setShowCreateModal }) => {
             >
               Startup Name:
               <span>
-                <i className="fa-solid fa-asterisk fa-xs text-red-400 mx-1"></i>
+                <i className="fa-solid fa-asterisk fa-2xs text-red-400 mx-1"></i>
               </span>
             </label>
             <input
@@ -145,7 +145,7 @@ const CreateStartUp = ({ onCreateStartUp, setShowCreateModal }) => {
             >
               CityLocation:
               <span>
-                <i className="fa-solid fa-asterisk fa-xs text-red-400 mx-1"></i>
+                <i className="fa-solid fa-asterisk fa-2xs text-red-400 mx-1"></i>
               </span>
             </label>
             <input
@@ -170,7 +170,7 @@ const CreateStartUp = ({ onCreateStartUp, setShowCreateModal }) => {
             >
               Investment Type:
               <span>
-                <i className="fa-solid fa-asterisk fa-xs text-red-400 mx-1"></i>
+                <i className="fa-solid fa-asterisk fa-2xs text-red-400 mx-1"></i>
               </span>
             </label>
             <input
@@ -193,7 +193,7 @@ const CreateStartUp = ({ onCreateStartUp, setShowCreateModal }) => {
             >
               Amount In USD:
               <span>
-                <i className="fa-solid fa-asterisk fa-xs text-red-400 mx-1"></i>
+                <i className="fa-solid fa-asterisk fa-2xs text-red-400 mx-1"></i>
               </span>
             </label>
             <input
@@ -219,7 +219,7 @@ const CreateStartUp = ({ onCreateStartUp, setShowCreateModal }) => {
               >
                 Investor {index + 1}:
                 <span>
-                  <i className="fa-solid fa-asterisk fa-xs text-red-400 mx-1"></i>
+                  <i className="fa-solid fa-asterisk fa-2xs text-red-400 mx-1"></i>
                 </span>
               </label>
 
@@ -239,7 +239,7 @@ const CreateStartUp = ({ onCreateStartUp, setShowCreateModal }) => {
                       className="hover:opacity-70 mr-4 absolute right-0 top-1"
                       onClick={() => removeInvestor(index)}
                     >
-                      <i className="fa-solid fa-trash fa-xs text-red-400"></i>
+                      <i className="fa-solid fa-trash fa-2xs text-red-400"></i>
                     </button>
                   )}
                 </div>
