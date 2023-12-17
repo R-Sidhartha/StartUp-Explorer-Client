@@ -43,7 +43,7 @@ const StartUpCard = ({ startUp, DeleteStartUp }) => {
         <span className="sm:text-2xl font-bold text-center block mb-2 mt-4 lg:mt-0">
           {startUp.StartupName || "N/A"}
         </span>
-        <span className="text-gray-600 text-center block h-5">
+        <span className="text-gray-600 text-center block ">
           <span className="text-xs sm:text-sm">{startUp.IndustryVertical || "N/A"}</span>
         </span>
         <span className="text-yellow-700 text-center block">
