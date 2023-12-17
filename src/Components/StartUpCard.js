@@ -35,44 +35,44 @@ const StartUpCard = ({ startUp, DeleteStartUp }) => {
     DeleteStartUp(startUp._id);
   };
   return (
-    <div className="relative group ">
+    <div className="relative group">
       <div
         className="bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 rounded-md p-4 shadow-lg  relative z-10"
         
       >
-        <span className="text-2xl font-bold text-center block mb-2 mt-4 lg:mt-0">
+        <span className="sm:text-2xl font-bold text-center block mb-2 mt-4 lg:mt-0">
           {startUp.StartupName || "N/A"}
         </span>
         <span className="text-gray-600 text-center block h-5">
-          <span className="text-sm">{startUp.IndustryVertical || "N/A"}</span>
+          <span className="text-xs sm:text-sm">{startUp.IndustryVertical || "N/A"}</span>
         </span>
         <span className="text-yellow-700 text-center block">
           <span className="text-xs">({startUp.SubVertical || "N/A"})</span>
         </span>
-        <div className="text-gray-700 my-1 text-sm md:text-base">
+        <div className="text-gray-700 my-1 text-sm lg:text-base">
           <div>
             <span>
               <i className="fa-solid fa-location-dot text-red-500"></i>
             </span>{" "}
-            <span className="text-gray-500">
+            <span className="text-gray-500 text-sm sm:text-base">
               {startUp.CityLocation || "N/A"}
             </span>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center">
           <p className="text-gray-700 my-2 text-sm md:text-base rounded-lg">
             <span>
               <i className="fa-solid fa-sack-dollar mr-1 text-violet-600"></i>
               Fund:
             </span>
-            <span className="text-gray-500 mx-1 ">
+            <span className="text-gray-500 mx-1 text-xs lg:text-base">
               {startUp.AmountInUSD || "N/A"}
               <span>
                 <i className="fa-solid fa-dollar-sign fa-sm mx-1"></i>
               </span>
             </span>
           </p>
-          <div>
+          <div className="text-sm md:text-xs lg:text-base">
             <span>
               <i className="fa-solid fa-calendar-days mx-1"></i>
             </span>

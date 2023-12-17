@@ -15,7 +15,10 @@ const Home = () => {
   const [Loading, setLoading] = useState(true);
   const [ShowCreateModal, setShowCreateModal] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [investmentFilter, setInvestmentFilter] = useState("");
+  const [filters, setFilters] = useState({
+    investmentFilter: '',
+    locationFilter: '',
+  });
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,20 +35,19 @@ const Home = () => {
     // eslint-disable-next-line
   }, []);
 
-  // const handleFilterChange = (selectedFilter) => {
-  //   if (selectedFilter === "") {
-  //     setFilteredStartups(StartUps);
-  //   } else {
-  //     const filteredData = StartUps.filter(
-  //       (startup) => startup.InvestmentType === selectedFilter
-  //     );
-  //     setFilteredStartups(filteredData);
-  //   }
-  //   setCurrentPage(1); // Reset current page when filter changes
-  // };
   const handleFilterChange = (selectedFilter) => {
-    setInvestmentFilter(selectedFilter);
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      investmentFilter: selectedFilter,
+    }));
     setCurrentPage(1); // Reset current page when filter changes
+  };
+  const handleLocationFilterChange = (selectedFilter) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      locationFilter: selectedFilter,
+    }));
+    setCurrentPage(1); 
   };
 
   const handleSearch = useCallback(
@@ -54,18 +56,23 @@ const Home = () => {
 
       const filteredData = StartUps.filter((startup) => {
         const investmentTypeMatch =
-          investmentFilter === "" ||
-          startup.InvestmentType === investmentFilter;
+          filters.investmentFilter === "" ||
+          startup.InvestmentType === filters.investmentFilter;
+
+        const locationMatch =
+          filters.locationFilter === "" ||
+          startup.CityLocation === filters.locationFilter;
+
         const searchMatch = startup.StartupName.toLowerCase().includes(
           query.toLowerCase()
         );
 
-        return investmentTypeMatch && searchMatch;
+        return investmentTypeMatch && locationMatch && searchMatch;
       });
 
       setFilteredStartups(filteredData);
     },
-    [investmentFilter, StartUps, setFilteredStartups]
+    [filters.investmentFilter, filters.locationFilter, StartUps]
   );
 
   const clearSearch = () => {
@@ -75,7 +82,7 @@ const Home = () => {
 
   useEffect(() => {
     handleSearch(searchQuery);
-  }, [searchQuery, investmentFilter, StartUps, handleSearch]);
+  }, [searchQuery, filters.investmentFilter, filters.locationFilter, StartUps,handleSearch]);
 
   const DeleteStartUp = async (startUpId) => {
     try {
@@ -123,11 +130,13 @@ const Home = () => {
                 setSearchQuery={setSearchQuery}
               />
             </div>
-            <div className="flex justify-end w-11/12 items-center mt-2">
+            <div className="flex justify-end w-11/12 items-center mt-4">
               <div>
                 <Filtering
                   startUps={StartUps}
                   onFilterChange={handleFilterChange}
+                  filters={filters}
+                  onLocationfilter={handleLocationFilterChange}
                 />
               </div>
               <div>

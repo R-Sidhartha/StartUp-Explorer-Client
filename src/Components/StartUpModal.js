@@ -7,8 +7,8 @@ const StartUpModal = ({ startUp, setShowModal, formatCustomDate}) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="bg-gray-800 bg-opacity-50 w-full h-full absolute"></div>
-      <div className="modal-container w-4/5 h-3/4  rounded shadow-lg z-50 overflow-y-auto relative bg-white">
-        <div className="modal-content p-4 w-full h-full">
+      <div className="modal-container w-4/5 h-4/5 md:h-3/4  rounded shadow-lg z-50 overflow-y-auto relative bg-white">
+        <div className="modal-content p-4 w-full md:h-full">
           <span
             className="close-button absolute top-3 right-4 text-gray-600"
             onClick={closeModal}
@@ -16,7 +16,7 @@ const StartUpModal = ({ startUp, setShowModal, formatCustomDate}) => {
             <i className="fa-solid fa-circle-xmark cursor-pointer hover:opacity-70 fa-lg"></i>
           </span>
           <div className="flex flex-col md:flex-row justify-center p-3 h-full">
-            <div className={`flex flex-col bg-cover bg-search-bg justify-center items-center md:w-2/3 h-full mx-3`}>
+            <div className={`flex flex-col bg-cover bg-search-bg justify-center items-center md:w-2/3 h-72 md:h-full mx-3`}>
               <h2 className="text-2xl font-bold mb-4 text-center">
                 {startUp.StartupName || "N/A"}
               </h2>
@@ -27,7 +27,7 @@ const StartUpModal = ({ startUp, setShowModal, formatCustomDate}) => {
                 <strong>SubVertical:</strong> {startUp.SubVertical || "N/A"}
               </p>
             </div>
-            <div className="md:w-1/3 mt-10 h-5/6">
+            <div className="md:w-1/3 mt-2 md:mt-10 h-5/6">
                 <h2 className="text-center text-lg font-semibold">StartUp Details</h2>
               <div className="text-gray-700 my-3 font-semibold">
                 Investors:
@@ -43,11 +43,11 @@ const StartUpModal = ({ startUp, setShowModal, formatCustomDate}) => {
                   ))}
                 </ul>
               </div>
-              <p className="text-gray-700 mt-5 text-lg md:text-base font-semibold">
+              <p className="text-gray-700 mt-1 md:mt-5 text-lg md:text-base font-semibold">
                 Investment Type:{" "}
                 <span className="text-gray-600 mx-2">{startUp.InvestmentType || "N/A"}</span>
               </p>
-                <div className="my-3">
+                <div className=" md:my-3">
                   <span>
                     <i className="fa-solid fa-location-dot text-red-500"></i>
                   </span>{" "}
@@ -72,7 +72,7 @@ const StartUpModal = ({ startUp, setShowModal, formatCustomDate}) => {
                   <span>{formatCustomDate(startUp.Date) || "N/A"}</span>
                 </div>
                 </div>
-                <p className="text-gray-700 my-3 text-sm md:text-base rounded-lg">
+                <p className="text-gray-700 md:my-3 text-sm md:text-base rounded-lg">
                   <span className="text-lg text-black">
                     Remarks:
                   </span>
