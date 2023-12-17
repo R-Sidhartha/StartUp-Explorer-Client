@@ -9,15 +9,15 @@ Leveraging React Context for efficient state management, this client interacts s
 The user interface is thoughtfully crafted, featuring visually striking startup cards presented in a grid layout.
 
 ### Core Features
-#### Pagination & Grid Layout: Enjoy a smooth browsing experience with pagination, showcasing 20 startup cards per page within an aesthetically pleasing grid container.
+ **Pagination & Grid Layout**: Enjoy a smooth browsing experience with pagination, showcasing 20 startup cards per page within an aesthetically pleasing grid container.
 
-#### Filters, Search & CRUD Operations: Easily filter startups by investment type and location. Empower users with a search functionality based on startup names. Intuitively perform Create, Read, Update, and Delete operations with modals enhancing user interaction.
+ **Filters, Search & CRUD Operations**: Easily filter startups by investment type and location. Empower users with a search functionality based on startup names. Intuitively perform Create, Read, Update, and Delete operations with modals enhancing user interaction.
 
-#### Component Architecture & Readable Code: Maintainable and readable code is ensured through a well-structured component architecture, fostering easy comprehension and future development.
+**Component Architecture & Readable Code**: Maintainable and readable code is ensured through a well-structured component architecture, fostering easy comprehension and future development.
 
-#### UI Enhancements: Elevate the user experience with visual elements such as images, gifs for loading, and background images, creating an engaging and visually appealing interface.
+**UI Enhancements**: Elevate the user experience with visual elements such as images, gifs for loading, and background images, creating an engaging and visually appealing interface.
 
-#### React-datepicker & React-router-dom: Employ React-datepicker for a user-friendly startup creation process and React-router-dom for smooth navigation, allowing seamless integration of additional web pages in the future.
+**React-datepicker & React-router-dom**: Employ React-datepicker for a user-friendly startup creation process and React-router-dom for smooth navigation, allowing seamless integration of additional web pages in the future.
 
 Startup Explorer Client offers a powerful and enjoyable platform for exploring, managing, and interacting with startup data. Dive in and discover the world of startups effortlessly.
 
